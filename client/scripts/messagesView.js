@@ -10,7 +10,6 @@ var MessagesView = {
     for(var i = 0; i < arr.length; i++) {
       MessagesView.renderMessage(arr[i]);
     }
-    
   },
 
   renderMessage: function(obj) {
