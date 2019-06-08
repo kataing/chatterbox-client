@@ -7,6 +7,11 @@ var RoomsView = {
   },
 
   render: function() {
+  },
+
+  renderMessage: function(str) {
+    console.log('ahhh');
   }
+
 
 };
