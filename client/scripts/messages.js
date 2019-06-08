@@ -1,25 +1,15 @@
 var Messages = {
-  // username: window.location.search.substr(10),
-  // roomname: 'halp',
-  // text: 'me',
-
-  $text: $('#message'),
-
+  
   newMessage: function() {
-    console.log('asdfjasldfjsdf');
     var obj = {
-      username: App.username,
-      text: 'Messages.$text.text()' //FIX THIS!!! CHANGE SYNTAX
-    }; // store username, roomname. & text
+      username: window.location.search.substr(10),
+      text: $('#message').val()
+    };
 
-    return MessageView.render(obj) // {username: ----, }
-  }  // create a new message
+    return MessageView.render(obj)
+  }
 };
 
-  // x: function () {
-  //   App.fetch()
-  // }
 
-// need code that creates 1 message
-// Messages.x()
+// need code that creates 1 messages
 // format this object to mimick the format of other objects aka app

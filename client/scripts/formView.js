@@ -9,10 +9,8 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    console.log('hello');
-    Parse.create(Messages.newMessage(), () => console.log('success!'))
     console.log(Messages.newMessage());
-    console.log('ASDLKFJSF');
+    Parse.create(Messages.newMessage(), () => console.log('success!'))
     console.log('click!');
   },
 
