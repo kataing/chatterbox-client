@@ -2,21 +2,17 @@ var MessagesView = {
 
   $chats: $('#chats'),
   html: '',
-  count: 0,
 
   initialize: function() {
   },
 
   render: function(arr) {
-    console.log('render?');
     for(var i = 0; i < arr.length; i++) {
       MessagesView.renderMessage(arr[i]);
     }
   },
 
   renderMessage: function(obj) {
-    MessagesView.count ++;
-    console.log('are you in the html?')
     if(!obj.username) {
       obj.username = '';
     }
