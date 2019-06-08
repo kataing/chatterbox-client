@@ -15,6 +15,9 @@ var App = {
     App.startSpinner();
     App.fetch(App.stopSpinner);
 
+    // Refresh page every n seconds
+    // setInterval(()=>{MessagesView.initialize();}, 3000)
+
   },
 
   fetch: function(callback = ()=>{}) {
@@ -23,6 +26,7 @@ var App = {
       console.log(data);
 
       MessagesView.render(data.results);
+      console.log('why wont you run?');
       callback();      
     });
     

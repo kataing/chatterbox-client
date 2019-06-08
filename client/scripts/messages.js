@@ -1,12 +1,14 @@
 var Messages = {
+
+  $text: $('#message'),
   
   newMessage: function() {
-    var obj = {
-      username: window.location.search.substr(10),
-      text: $('#message').val()
-    };
 
-    return MessageView.render(obj)
+    var obj = {
+      username: App.username.replace('username=', ''),
+      text: Messages.$text.val()
+    };
+    return obj;
   }
 };
 
