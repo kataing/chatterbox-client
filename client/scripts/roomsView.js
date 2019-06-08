@@ -4,12 +4,21 @@ var RoomsView = {
   $select: $('#rooms select'),
 
   initialize: function() {
+    // WORK IN PROGRESS
+    RoomsView.$button.click(RoomsView.handleSubmit());
+  },
+
+  handleSubmit: function(event) {
+    // WORK IN PROGRESS
+    console.log(1);
+
   },
 
   render: function() {
   },
 
-  renderMessage: function(str) {
+  renderRoom: function(str) {
+    // WORK IN PROGRESS
     console.log('ahhh');
   }
 
