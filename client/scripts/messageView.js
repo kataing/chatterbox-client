@@ -1,5 +1,4 @@
 var MessageView = {
-  // everyMessage: App.fetch(),
   
   render: _.template(`
       <div class="chat">

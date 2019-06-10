@@ -15,13 +15,6 @@ var App = {
     App.startSpinner();
     App.fetch(App.stopSpinner);
 
-    // Refresh page every n seconds
-    setInterval(function() {
-      location.reload(true);
-      // App.fetch();
-      // App.initialize();
-    }, 5000)
-
   },
 
   fetch: function(callback = ()=>{}) {
@@ -30,6 +23,7 @@ var App = {
       console.log(data);
 
       MessagesView.render(data.results);
+      RoomsView.render(data.results);
       callback();      
     });
     

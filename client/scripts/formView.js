@@ -4,6 +4,7 @@ var FormView = {
 
   initialize: function() {
     FormView.$form.on('submit', FormView.handleSubmit);
+    // FormView.$form.on('submit', FormView.reload);
   },
 
   handleSubmit: function(event) {
@@ -11,11 +12,17 @@ var FormView = {
     event.preventDefault();
     Parse.create(Messages.newMessage(), () => console.log('success!'))
     console.log('click!');
+    // FormView.$form.on('submit', location.reload(true));
   },
 
   setStatus: function(active) {
     var status = active ? 'true' : null;
     FormView.$form.find('input[type=submit]').attr('disabled', status);
   }
+
+  // reload: function() {
+  //   event.preventDefault();
+  //   FormView.$form.on('submit', location.reload(true));
+  // }
 
 };

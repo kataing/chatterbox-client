@@ -4,22 +4,39 @@ var RoomsView = {
   $select: $('#rooms select'),
 
   initialize: function() {
-    // WORK IN PROGRESS
-    RoomsView.$button.click(RoomsView.handleSubmit());
+    RoomsView.$button.on('click', RoomsView.handleSubmit);
   },
 
   handleSubmit: function(event) {
-    // WORK IN PROGRESS
-    console.log(1);
+    // NOT WORKING
+    // event.preventDefault()
+    console.log('adding room');
+    // RoomsView.$select.val('New Room');
+    console.log('still adding');
 
   },
 
-  render: function() {
+  // creates an array of unique roomnames and calls RoomsView.renderRoom()
+  render: function(obj) {
+    var options = [];
+
+    for(var message in obj) {
+      var roomname = obj[message].roomname || '';
+      roomname.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
+      roomname.trim();
+
+      if(!options.includes(roomname)){
+        options.push(roomname);
+      }
+    }
+    options.forEach(RoomsView.renderRoom);
   },
 
+  // creates an html option for the room dropdown and appends it to <select>
   renderRoom: function(str) {
-    // WORK IN PROGRESS
-    console.log('ahhh');
+    console.log(str);
+    var option = '<option id="' + str + '">' + str+ '</option>'
+    RoomsView.$select.append(option);
   }
 
 
